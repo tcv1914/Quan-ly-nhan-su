@@ -1,0 +1,17 @@
+database hiện có:
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(100) UNIQUE,
+  password VARCHAR(255),
+  role VARCHAR(20) DEFAULT 'employee',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE employees (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100),
+  phone VARCHAR(20),
+  position VARCHAR(100),
+  salary DECIMAL(10,2),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
